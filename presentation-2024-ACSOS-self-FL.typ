@@ -5,7 +5,7 @@
 
 #show: metropolis-theme.with(
   aspect-ratio: "16-9",
-  footer: [Optional Footnote]
+  //footer: [Optional Footnote]
 )
 
 #set text(font: "Fira Sans", weight: 350, size: 20pt)
@@ -36,9 +36,11 @@
 
 #let author = block(inset: 0.1em)[
   #table(inset: 0.5em, stroke: none, columns: (auto, 4fr),  align: (left, left),
-    [#alert[*Author 1*]], [`author1@mail.com`],
-    [Author 2], [`author2@mail.com`],
-    [Author 3], [`author3@mail.com`],
+    [#alert[*Davide Domini*]], [`davide.domini@unibo.it`],
+    [Gianluca Aguzzi], [`gianluca.aguzzi@unibo.it`],
+    [Nicolas Farabegoli], [`nicolas.farabegoli@unibo.it`],
+    [Mirko Viroli], [`mirko.viroli@unibo.it`],
+    [Lukas Esterle], [`lukas.esterle@ece.au.dk`],
   )
   #place(right, dy:-1.5em)[
     #figure(image("images/disi.svg", width:40%))
@@ -46,13 +48,13 @@
 ]
 
 #title-slide(
-  title: "Slide Title",
-  subtitle: "Subtitle",
+  title: "Proximity-based Self-Federated Learning",
+  subtitle: "TALK @ ACSOS 2024",
   author: author,
   // date: datetime.today().display("[day] [month repr:long] [year]"),
 )
 
-#new-section-slide("Slide section 1")
+#new-section-slide("Background")
 
 #slide(title: "Slide")[
   *Bold* and _italic_ text.
