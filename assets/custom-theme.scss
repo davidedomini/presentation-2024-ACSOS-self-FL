@@ -176,6 +176,43 @@ section.has-light-background {
 	font-size: 0.7em;
 }
 
+.reveal .slide-background:after {
+	content: "Domini et. al - Proximity-based Self-Federated Learning - ACSOS 2024";
+	position: absolute;
+	bottom: 2.5%;
+	right: 6%;
+	z-index: -1;
+	color: $linkColor;
+	font-size: .4em;
+}	
+$logo: url("../example-background-neg.svg");
+section.has-light-background {
+ 	$detailBackgroundColor: #bd2b0b !global;
+ 	$logo: url("../example-background.svg") !global;
+// 	&, h1, h4, h5, h6 {
+// 		color: #242325;
+// 	}
+// 	h2 {
+// 		color: #4999e4;
+// 	}
+// 	h3 {
+// 		color: #0084ff;
+// 	}
+}
+
+
+.reveal .slide-background {
+	background-color: $backgroundColor;
+	background-image: $logo;
+	background-repeat: no-repeat;
+	background-position: 0.45% 99.2%;
+	background-size: 15%;
+	background-clip: border-box;
+	border-radius: 30px 30x;
+	border-style: hidden;
+	border-width: 0.3em 0.3em;
+}
+
 .gist-it-gist .gist-file .gist-data pre, .gister-gist .gist-file .gist-data pre {
 	box-shadow: none !important;
 }
@@ -259,20 +296,4 @@ kbd {
 	max-height: 100vh;
 }
 
-.reveal .slide-background {
-	background-color: $backgroundColor;
-	background-image: url("../images/logo.svg");
-	background-repeat: no-repeat;
-	background-position: -5% 94%;
-	background-size: 10%;
-	background-clip: border-box;
-}
 
-// .reveal .slide-background:after {
-// 	content: "M. Baiardi, S. Burattini, G. Ciatto, D. Pianini - JaKtA: BDI Agent-Oriented Programming in pure Kotlin - EUMAS 2023";
-// 	position: absolute;
-// 	bottom: 2.5%;
-// 	left: 1%;
-// 	z-index: -1;
-// 	font-size: .5em;
-//   }
