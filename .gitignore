@@ -3,4 +3,3 @@ build/
 _gen/
 *.hprof
 *build.lock
-content/_index.md
