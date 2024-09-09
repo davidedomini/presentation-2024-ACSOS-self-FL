@@ -186,28 +186,19 @@ section.has-light-background {
 	font-size: .4em;
 }	
 
-// $logo: url("../content/footer-uni.svg");
-// section.has-light-background {
-//  	$detailBackgroundColor: red !global;
-//  	$logo: url("../content/footer-uni.svg") !global;
-// 	&, h1, h4, h5, h6 {
-// 		color: #242325;
-// 	}
-// 	h2 {
-// 		color: #4999e4;
-// 	}
-// 	h3 {
-// 		color: #0084ff;
-// 	}
-//}
+$logo: url("../footer-uni.svg");
+
+section.has-light-background {
+ 	$detailBackgroundColor: red !global;
+}
 
 
 .reveal .slide-background {
 	background-color: $backgroundColor;
-	//background-image: $logo;
+	background-image: $logo;
 	background-repeat: no-repeat;
 	background-position: 0.45% 99.2%;
-	background-size: 15%;
+	background-size: 12%;
 	background-clip: border-box;
 	border-radius: 30px 30x;
 	border-style: hidden;

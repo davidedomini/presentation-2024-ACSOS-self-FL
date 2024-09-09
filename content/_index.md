@@ -44,29 +44,33 @@ aliases = [
   {{% fragment %}}
 
   ### Centralized Approach
-  <div style="text-align: center; heigth: 40%;">
-  <img src="federated-learning-schema.svg" style="width: 75%" />
+  <div style="text-align: center; heigth: 100%;">
+  <img src="federated-learning-schema.svg" style="width: 100%" />
   </div>
 
   {{%/ fragment %}}
 
+
+  {{</col>}}
+  {{<col>}}
+  <br> <br> 
   {{% fragment %}}
 
-#### Pros and cons
+ ### Pros 
 
-<span style="font-size: 25px;">
-{{<multicol>}}
-
-{{<col>}}
 {{% fragment %}}
 <p> <i class="fa-solid fa-check" style="color: green;"></i> Reduces privacy concern </p>
 {{%/ fragment %}}
 {{% fragment %}}
 <p> <i class="fa-solid fa-check" style="color: green;"></i> Transfer less data to the server </p>
 {{%/ fragment %}}
-{{</col>}}
 
-{{<col>}}
+{{% fragment %}}
+
+### Cons
+{{%/ fragment %}}
+
+
 {{% fragment %}}
 <p> <i class="fa-solid fa-xmark" style="color: red;"></i> Need for a central trusted entity </p>
 {{%/ fragment %}}
@@ -79,28 +83,20 @@ aliases = [
 <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Data heterogeneity </p>
 {{%/ fragment %}}
 
-{{</col>}}
-
-{{</multicol>}}
-
-</span>
 
 {{%/ fragment %}}
 
   {{</col>}}
-  {{<col>}}
-  {{% fragment %}}
-
-  ### Peer-to-Peer Approach
-  <div style="text-align: center; heigth: 40%;">
-  <img src="federated-learning-schema-p2p.svg" style="width: 75%" />
-  </div>
-
-  {{%/ fragment %}}
-
-  {{</col>}}
 {{</multicol>}}
- 
+
+---
+
+# Federated Learning in a nutshell (2)
+
+ ### Peer-to-Peer Approach
+  <div style="text-align: center; heigth: 80%;">
+  <img src="federated-learning-schema-p2p.svg" style="width: 50%" />
+  </div>
 
 
 ---
@@ -133,11 +129,15 @@ aliases = [
 
 ---
 
+
 # Proximity-based Self-Federated Learning
+
 
 ---
 
 # Algorithm overview
+
+<br> <br> 
 
 {{<multicol>}}
 
@@ -165,9 +165,9 @@ aliases = [
 
 ---
 
----
-
 # Loss based dissimilarity
+
+<br>
 
 {{<multicol>}}
 
@@ -197,6 +197,33 @@ aliases = [
 
 # Experimental evaluation
 
+<div style="text-align:left; margin-left:33%">
+{{% fragment %}}
+<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> Dataset: </b> Extended MNIST - Handwritten Letters </p>
+{{%/ fragment %}}
+
+{{% fragment %}}
+<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> 26 classes </b> (latin alphabet) </p>
+{{%/ fragment %}}
+
+{{% fragment %}}
+<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> 124800 </b> train samples </p>
+{{%/ fragment %}}
+
+{{% fragment %}}
+<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> 20800 </b> test samples </p>
+{{%/ fragment %}}
+
+
+{{% fragment %}}
+<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> Synthetically split in <b> {3, 5, 9} </b> areas </p>
+{{%/ fragment %}}
+
+{{% fragment %}}
+<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
+{{%/ fragment %}}
+
+</div>
 
 ---
 
