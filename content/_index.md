@@ -19,6 +19,9 @@ aliases = [
 [Mirko Viroli](mailto:mirko.viroli@unibo.it) <i class="fa-solid fa-circle-nodes"></i>,
 [Lukas Esterle](mailto:lukas.esterle@ece.au.dk) <i class="fa-solid fa-laptop-code"></i>
 
+International Conference on Autonomic Computing and Self-Organazing Systems @ ACSOS 2024
+
+<br>
 
 {{% multicol %}}
 {{% col %}}
@@ -34,6 +37,11 @@ aliases = [
 <i class="fa-solid fa-laptop-code"></i> Department of Electrical and Computer Engineering, Aarhus University, Aarhus (AAR), Denmark
 {{% /col %}}
 {{% /multicol %}}
+
+---
+
+# Use case
+
 
 ---
 # Federated Learning in a nutshell
@@ -93,11 +101,42 @@ aliases = [
 
 # Federated Learning in a nutshell (2)
 
+{{<multicol>}}
+
+  {{<col>}}
+
+  {{% fragment %}}
+
  ### Peer-to-Peer Approach
-  <div style="text-align: center; heigth: 80%;">
-  <img src="federated-learning-schema-p2p.svg" style="width: 50%" />
+
+  <div style="text-align: center; heigth: 100%;">
+  <img src="federated-learning-schema-p2p.svg" style="width: 100%" />
   </div>
 
+  {{%/ fragment %}}
+
+  {{</col>}}
+
+  {{<col>}}
+
+  {{% fragment %}}
+
+  ### Still some cons
+
+  {{% fragment %}}
+  <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Data heterogeneity </p>
+  {{%/ fragment %}}
+
+  {{% fragment %}}
+  <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Communication overhead in the network </p>
+  {{%/ fragment %}}
+
+  {{%/ fragment %}}
+
+  {{</col>}}
+
+
+{{</multicol>}}
 
 ---
 
@@ -106,7 +145,7 @@ aliases = [
 {{% fragment %}}
 
 <div style="text-align: center; heigth: 40%;">
-<img src="clustered-FL.svg" style="width: 50%" />
+<img src="clustered-FL.svg" style="width: 45%" />
 </div>
 
 {{%/ fragment %}}
@@ -123,15 +162,44 @@ aliases = [
 <p> <span style="color: #fd8300;">Similarity measures:</span> loss based, gradient based, weight based </p>
 {{%/ fragment %}}
 
----
+{{% fragment %}}
+### BUT
+{{%/ fragment %}}
 
-# Use case
+{{% fragment %}}
+<p> <i class="fa-solid fa-xmark"style="color: red;"></i> Clustering is performed by a central server </p>
+{{%/ fragment %}}
+
+{{% fragment %}}
+<p> <i class="fa-solid fa-xmark"style="color: red;"></i> Number of clusters must be defined a priori </p>
+{{%/ fragment %}}
+
 
 ---
 
 
 # Proximity-based Self-Federated Learning
 
+
+---
+
+# Let's abstract the use case
+
+  
+  <div style="text-align:left; margin-left:20%">
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A spatial area $A = \{ a_1, ..., a_k \}$ divided into $k$ distinct continuos area </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each area $a_j$ has a unique local data distribution $\theta_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A set of sensor nodes $S = \{ s_1, ..., s_n\} (n > |A|)$ are deployed in $A$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor will be located in a specifica area $a_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor has a certain communication range $r_c$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor $s_i$ has a certain neighbourhood $N_i$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> The complete local dataset $D_i$ is represented as $D_i = \{ (x_1, y_1), ..., (x_m, y_m) \}$ </p>
+  </div>
+
+  <img
+    src="problem-definition-only1.svg"
+    style = "heigth: 100%"
+  />
 
 ---
 
@@ -167,6 +235,7 @@ aliases = [
 
 # Loss based dissimilarity
 
+> if two clients
 <br>
 
 {{<multicol>}}
@@ -195,6 +264,10 @@ aliases = [
 
 --- 
 
+# Space-fluid sparse choice
+
+--- 
+
 # Experimental evaluation
 
 <div style="text-align:left; margin-left:33%">
@@ -220,9 +293,20 @@ aliases = [
 {{%/ fragment %}}
 
 {{% fragment %}}
+<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> Simulations realized in <b>Alchemist</b>¹, algorithms written in <b>ScaFi</b>² </p>
+{{%/ fragment %}}
+
+{{% fragment %}}
 <p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
 {{%/ fragment %}}
 
+</div>
+
+<div style="text-align:left; margin-left:5%; font-size:15pt;">
+
+1. https://alchemistsimulator.github.io/
+
+2. https://scafi.github.io/
 </div>
 
 ---
