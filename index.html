@@ -31,6 +31,8 @@
 <a href="mailto:nicolas.farabegoli@unibo.it">Nicolas Farabegoli</a> <i class="fa-solid fa-circle-nodes"></i>,
 <a href="mailto:mirko.viroli@unibo.it">Mirko Viroli</a> <i class="fa-solid fa-circle-nodes"></i>,
 <a href="mailto:lukas.esterle@ece.au.dk">Lukas Esterle</a> <i class="fa-solid fa-laptop-code"></i></p>
+<p>International Conference on Autonomic Computing and Self-Organazing Systems @ ACSOS 2024</p>
+<br>
 
 <div class="container w-100 p-0">
     <div class="row "><div class="col "><div style="text-align: center; width: 100%;">
@@ -45,6 +47,8 @@
 </div>
 </div>
 </div>
+</section><section>
+<h1 id="use-case">Use case</h1>
 </section><section>
 <h1 id="federated-learning-in-a-nutshell">Federated Learning in a nutshell</h1>
 
@@ -102,17 +106,57 @@
 </div>
 </section><section>
 <h1 id="federated-learning-in-a-nutshell-2">Federated Learning in a nutshell (2)</h1>
-<h3 id="peer-to-peer-approach">Peer-to-Peer Approach</h3>
-  <div style="text-align: center; heigth: 80%;">
-  <img src="federated-learning-schema-p2p.svg" style="width: 50%">
+
+<div class="container w-100 p-0">
+    <div class="row ">
+
+  
+
+<div class="col ">
+
+  
+
+<span class="fragment ">
+  <h3 id="peer-to-peer-approach">Peer-to-Peer Approach</h3>
+  <div style="text-align: center; heigth: 100%;">
+  <img src="federated-learning-schema-p2p.svg" style="width: 100%">
   </div>
+
+</span>
+
+
+  </div>
+
+  
+
+<div class="col ">
+
+  
+
+<span class="fragment ">
+  <h3 id="still-some-cons">Still some cons</h3>
+<span class="fragment ">
+    <p> <i class="fa-solid fa-xmark" style="color: red;"></i> Data heterogeneity </p>
+</span>
+<span class="fragment ">
+    <p> <i class="fa-solid fa-xmark" style="color: red;"></i> Communication overhead in the network </p>
+</span>
+
+</span>
+
+
+  </div>
+
+
+</div>
+</div>
 </section><section>
 <h1 id="clustered-federated-learning">Clustered Federated Learning</h1>
 
 
 <span class="fragment ">
   <div style="text-align: center; heigth: 40%;">
-<img src="clustered-FL.svg" style="width: 50%">
+<img src="clustered-FL.svg" style="width: 45%">
 </div>
 
 </span>
@@ -138,10 +182,41 @@
 
 </span>
 
-</section><section>
-<h1 id="use-case">Use case</h1>
+
+
+<span class="fragment ">
+  <h3 id="but">BUT</h3>
+
+</span>
+
+
+
+<span class="fragment ">
+  <p> <i class="fa-solid fa-xmark" style="color: red;"></i> Clustering is performed by a central server </p>
+
+</span>
+
+
+
+<span class="fragment ">
+  <p> <i class="fa-solid fa-xmark" style="color: red;"></i> Number of clusters must be defined a priori </p>
+
+</span>
+
 </section><section>
 <h1 id="proximity-based-self-federated-learning-1">Proximity-based Self-Federated Learning</h1>
+</section><section>
+<h1 id="lets-abstract-the-use-case">Let’s abstract the use case</h1>
+  <div style="text-align:left; margin-left:20%">
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A spatial area $A = \{ a_1, ..., a_k \}$ divided into $k$ distinct continuos area </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each area $a_j$ has a unique local data distribution $\theta_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A set of sensor nodes $S = \{ s_1, ..., s_n\} (n &gt; |A|)$ are deployed in $A$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor will be located in a specifica area $a_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor has a certain communication range $r_c$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor $s_i$ has a certain neighbourhood $N_i$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> The complete local dataset $D_i$ is represented as $D_i = \{ (x_1, y_1), ..., (x_m, y_m) \}$ </p>
+  </div>
+<p><img src="problem-definition-only1.svg" style="heigth: 100%"></p>
 </section><section>
 <h1 id="algorithm-overview">Algorithm overview</h1>
 <p><br> <br></p>
@@ -165,7 +240,10 @@
 </div>
 </section><section>
 <h1 id="loss-based-dissimilarity">Loss based dissimilarity</h1>
-<br>
+<blockquote>
+<p>if two clients
+<br></p>
+</blockquote>
 
 <div class="container w-100 p-0">
     <div class="row ">
@@ -184,6 +262,8 @@
   </div>
 </div>
 </div>
+</section><section>
+<h1 id="space-fluid-sparse-choice">Space-fluid sparse choice</h1>
 </section><section>
 <h1 id="experimental-evaluation">Experimental evaluation</h1>
 <div style="text-align:left; margin-left:33%">
@@ -225,10 +305,27 @@
 
 
 <span class="fragment ">
+  <p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> Simulations realized in <b>Alchemist</b>¹, algorithms written in <b>ScaFi</b>² </p>
+
+</span>
+
+
+
+<span class="fragment ">
   <p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
 
 </span>
 
+</div>
+<div style="text-align:left; margin-left:5%; font-size:15pt;">
+<ol>
+<li>
+<p><a href="https://alchemistsimulator.github.io/">https://alchemistsimulator.github.io/</a></p>
+</li>
+<li>
+<p><a href="https://scafi.github.io/">https://scafi.github.io/</a></p>
+</li>
+</ol>
 </div>
 </section><section>
 <h1 id="simulation">Simulation</h1>
