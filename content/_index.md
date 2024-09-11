@@ -107,6 +107,7 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
   {{% fragment %}}
 
+
   ### Still some cons
 
   <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Data heterogeneity </p>
@@ -173,13 +174,13 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
   
   <div style="text-align:left; margin-left:25%">
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A spatial area $A = \{ a_1, ..., a_k \}$ divided into $k$ distinct continuos area </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each area $a_j$ has a unique local data distribution $\theta_j$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A set of sensor nodes $S = \{ s_1, ..., s_n\} (n > |A|)$ are deployed in $A$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor will be located in a specifica area $a_j$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor has a certain communication range $r_c$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor $s_i$ has a certain neighbourhood $N_i$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> The complete local dataset $D_i$ is represented as $D_i = \{ (x_1, y_1), ..., (x_m, y_m) \}$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> A spatial area $A = \{ a_1, ..., a_k \}$ divided into $k$ distinct continuos area </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each area $a_j$ has a unique local data distribution $\Theta_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> A set of sensor nodes $S = \{ s_1, ..., s_n\} (n > |A|)$ are deployed in $A$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor will be located in a specifica area $a_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor has a certain communication range $r_c$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor $s_i$ has a certain neighbourhood $N_i$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> The complete local dataset $D_i$ is represented as $D_i = \{ (x_1, y_1), ..., (x_m, y_m) \}$ </p>
   </div>
 
   <img
@@ -255,8 +256,8 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 <div style="text-align:left; margin-left:32%; font-size:20pt;%">
 <p> Let: </b>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> $m(n_1, n_2)$ be a similarity metric between two nodes </p> 
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> $\sigma > 0$ be the maximum acceptable error </p> 
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> $m(n_1, n_2)$ be a similarity metric between two nodes </p> 
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b"></i> $\sigma > 0$ be the maximum acceptable error </p> 
 </div>
 {{<multicol>}}
 
@@ -303,8 +304,8 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
   >
   
   <p>Suppose: </p>
-  <p><i class="fa-solid fa-angle-right" style="color: black;"></i> $m(l, n_1) + m(n_1, n_2) < \sigma$ </p>
-  <p><i class="fa-solid fa-angle-right" style="color: black;"></i> $m(l, n_1) + m(n_1, n_2) + m(n_2, n_3) > \sigma$ </p>
+  <p><i class="fa-solid fa-angle-right" style="color: #22373b;"></i> $m(l, n_1) + m(n_1, n_2) < \sigma$ </p>
+  <p><i class="fa-solid fa-angle-right" style="color: #22373b;"></i> $m(l, n_1) + m(n_1, n_2) + m(n_2, n_3) > \sigma$ </p>
   </div>
 {{</col>}}
 
@@ -315,17 +316,18 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 # Experimental evaluation
 
 <br>
+{{% fragment %}}
 
 <div style="text-align:left; margin-left:33%">
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> Dataset: </b> Extended MNIST - Handwritten Letters </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> 26 classes </b> (latin alphabet) </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> 124800 </b> train samples </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> 20800 </b> test samples </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Synthetically split in <b> {3, 5, 9} </b> areas </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Simulations realized in <b>Alchemist</b>¹, algorithms written in <b>ScaFi</b>² </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
-{{%/ fragment %}}
+
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> Dataset: </b> Extended MNIST - Handwritten Letters </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> 26 classes </b> (latin alphabet) </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> 124800 </b> train samples </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> 20800 </b> test samples </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Synthetically split in <b> {3, 5, 9} </b> areas </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Simulations realized in <b>Alchemist</b>¹, algorithms written in <b>ScaFi</b>² </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
+
 
 </div>
 
@@ -335,6 +337,8 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 2. https://scafi.github.io/
 </div>
+
+{{%/ fragment %}}
 
 ---
 
@@ -364,9 +368,51 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 ---
 
-# Conclusions and future works
 
-<div style="text-align:left; margin-left:33%">
+{{<multicol>}}
+
+{{<col class="col-6">}}
+
+<h1> Conclusions </h1>
+
+<br>
+
 {{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i>  </p>
+<div style="text-align:left; margin-left:0%">
+
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Federations are correctly created without defining a number of cluster a priori </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> PSFL adapts to different network topologies (centralized, semi-centralized, peer-to-peer)   </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Thanks to specialization is possible to use smaller models </p>
+
+</div>
+{{%/ fragment %}}
+
+{{</col>}}
+
+{{<col class="col-6">}}
+
+<h1> Future work </h1>
+
+<br>
+
+{{% fragment %}}
+<div style="text-align:left; margin-left:0%">
+
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the effect of node mobility on the federation' stability </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the potential of PSFL to adapt to dynamic network topologies </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the potential of PSFL to adapt to data distributions that change over time </p>
+
+</div>
+{{%/ fragment %}}
+
+{{</col>}}
+
+{{</multicol>}}
+{{% fragment %}}
+
+<img
+    src="qr-preprint.svg"
+    style = "width: 30%"
+/>
+
 {{%/ fragment %}}
