@@ -58,40 +58,26 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
   {{%/ fragment %}}
 
-
   {{</col>}}
+
   {{<col>}}
+
   <br> <br> 
+
   {{% fragment %}}
 
  ### Pros 
 
-{{% fragment %}}
 <p> <i class="fa-solid fa-check" style="color: green;"></i> Reduces privacy concern </p>
-{{%/ fragment %}}
-{{% fragment %}}
 <p> <i class="fa-solid fa-check" style="color: green;"></i> Transfer less data to the server </p>
 {{%/ fragment %}}
-
 {{% fragment %}}
 
 ### Cons
-{{%/ fragment %}}
 
-
-{{% fragment %}}
 <p> <i class="fa-solid fa-xmark" style="color: red;"></i> Need for a central trusted entity </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
 <p> <i class="fa-solid fa-xmark" style="color: red;"></i> Single point of failure </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
 <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Data heterogeneity </p>
-{{%/ fragment %}}
-
-
 {{%/ fragment %}}
 
   {{</col>}}
@@ -123,13 +109,8 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
   ### Still some cons
 
-  {{% fragment %}}
   <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Data heterogeneity </p>
-  {{%/ fragment %}}
-
-  {{% fragment %}}
   <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Communication overhead in the network </p>
-  {{%/ fragment %}}
 
   {{%/ fragment %}}
 
@@ -142,51 +123,56 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 # Clustered Federated Learning
 
-{{% fragment %}}
+{{<multicol>}}
 
-<div style="text-align: center; heigth: 40%;">
-<img src="clustered-FL.svg" style="width: 45%" />
+{{<col class="col-7">}}
+{{% fragment %}}
+<div style="text-align: center; heigth: 100%;">
+<img src="clustered-FL.svg" style="width: 100%" />
 </div>
+{{%/ fragment %}}
 
+{{</col>}}
+
+{{<col class="col-5">}}
+
+<div style="text-align:left; margin-left: 15%; font-size:20pt;">
+{{% fragment %}}
+<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Assumption:</span> clients can be divided in clusters (IID data within each cluster) </p>
 {{%/ fragment %}}
 
 {{% fragment %}}
-<p> <span style="color: #fd8300;">Assumption:</span> clients can be divided in clusters (IID data within each cluster) </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Multiple models </span> are trained to target various local distributions </p>
 {{%/ fragment %}}
 
 {{% fragment %}}
-<p> <span style="color: #fd8300;">Multiple models </span> are trained to target various local distributions </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Similarity measures:</span> loss based, gradient based, weight based </p>
 {{%/ fragment %}}
 
 {{% fragment %}}
-<p> <span style="color: #fd8300;">Similarity measures:</span> loss based, gradient based, weight based </p>
-{{%/ fragment %}}
 
-{{% fragment %}}
-### BUT
-{{%/ fragment %}}
+#### HOWEVER
 
-{{% fragment %}}
 <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Clustering is performed by a central server </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
 <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Number of clusters must be defined a priori </p>
 {{%/ fragment %}}
+
+</div>
+{{</col>}}
+
+{{</multicol>}}
 
 
 ---
 
-
 # Proximity-based Self-Federated Learning
-
 
 ---
 
 # Let's abstract the use case
 
   
-  <div style="text-align:left; margin-left:20%">
+  <div style="text-align:left; margin-left:25%">
   <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A spatial area $A = \{ a_1, ..., a_k \}$ divided into $k$ distinct continuos area </p>
   <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each area $a_j$ has a unique local data distribution $\theta_j$ </p>
   <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A set of sensor nodes $S = \{ s_1, ..., s_n\} (n > |A|)$ are deployed in $A$ </p>
@@ -233,9 +219,10 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 ---
 
-# Loss based dissimilarity
+# Loss based Similarity
 
-> if two clients
+> If the model trained by client A performs well on the dataset <br> of the client B (and viceversa), then the two clients <br> should be considered similar.
+
 <br>
 
 {{<multicol>}}
@@ -248,13 +235,13 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
       class="fragment current-visible"
       data-fragment-index="0"
       src="loss-dissimilarity.svg"
-      style = "width: 100%"
+      style = "width: 80%"
   />
   <img
       class="fragment current-visible"
       data-fragment-index="1"
       src="loss-dissimilarity2.svg"
-      style = "width: 100%"
+      style = "width: 80%"
   />
 
 </div>
@@ -266,38 +253,78 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 # Space-fluid sparse choice
 
+<div style="text-align:left; margin-left:32%; font-size:20pt;%">
+<p> Let: </b>
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> $m(n_1, n_2)$ be a similarity metric between two nodes </p> 
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> $\sigma > 0$ be the maximum acceptable error </p> 
+</div>
+{{<multicol>}}
+
+{{<col class="col-7">}}
+
+<div class="r-stack">
+
+  <img
+    class="fragment current-visible"
+    data-fragment-index="0"
+    src="leader-choice-1.svg"
+    style = "width: 100%"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="1"
+    src="leader-choice-2.svg"
+    style = "width: 100%"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="2"
+    src="leader-choice-3.svg"
+    style = "width: 100%"
+  />
+
+  <img
+    class="fragment current-visible"
+    data-fragment-index="3"
+    src="leader-choice-4.svg"
+    style = "width: 100%"
+  />
+
+</div>
+
+{{</col>}}
+
+{{<col class="col-5">}}
+
+  <div 
+  style="text-align:left; margin-left:15%; font-size:18pt;"
+  class="fragment"
+  data-fragment-index="2"
+  >
+  
+  <p>Suppose: </p>
+  <p><i class="fa-solid fa-angle-right" style="color: black;"></i> $m(l, n_1) + m(n_1, n_2) < \sigma$ </p>
+  <p><i class="fa-solid fa-angle-right" style="color: black;"></i> $m(l, n_1) + m(n_1, n_2) + m(n_2, n_3) > \sigma$ </p>
+  </div>
+{{</col>}}
+
+{{</multicol>}}
+
 --- 
 
 # Experimental evaluation
 
+<br>
+
 <div style="text-align:left; margin-left:33%">
 {{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> Dataset: </b> Extended MNIST - Handwritten Letters </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> 26 classes </b> (latin alphabet) </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> 124800 </b> train samples </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> 20800 </b> test samples </p>
-{{%/ fragment %}}
-
-
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> Synthetically split in <b> {3, 5, 9} </b> areas </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> Simulations realized in <b>Alchemist</b>¹, algorithms written in <b>ScaFi</b>² </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: blue;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> Dataset: </b> Extended MNIST - Handwritten Letters </p>
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> 26 classes </b> (latin alphabet) </p>
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> 124800 </b> train samples </p>
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> 20800 </b> test samples </p>
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Synthetically split in <b> {3, 5, 9} </b> areas </p>
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Simulations realized in <b>Alchemist</b>¹, algorithms written in <b>ScaFi</b>² </p>
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
 {{%/ fragment %}}
 
 </div>
@@ -339,5 +366,7 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 # Conclusions and future works
 
-
----
+<div style="text-align:left; margin-left:33%">
+{{% fragment %}}
+<p> <i class="fa-solid fa-angle-right" style="color: black;"></i>  </p>
+{{%/ fragment %}}
