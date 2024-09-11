@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/presentation-2024-ACSOS-self-FL/reveal-js/dist/reset.css">
 <link rel="stylesheet" href="/presentation-2024-ACSOS-self-FL/reveal-js/dist/reveal.css">
-  <link rel="stylesheet" href="/presentation-2024-ACSOS-self-FL/css/custom-theme.min.1d432921268089a93531d839da9d852a5e7ee40e2e8545ad9b3b5006f2e72274.css" id="theme"><link rel="stylesheet" href="/presentation-2024-ACSOS-self-FL/highlight-js/solarized-dark.min.css">
+  <link rel="stylesheet" href="/presentation-2024-ACSOS-self-FL/css/custom-theme.min.39deac0d6bb90adbb5ba2aace221bc9ebaa912f39761b3b0915d144fabd21ef2.css" id="theme"><link rel="stylesheet" href="/presentation-2024-ACSOS-self-FL/highlight-js/solarized-dark.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oxygen Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu Mono" rel="stylesheet">
@@ -212,13 +212,13 @@
 </section><section>
 <h1 id="lets-abstract-the-use-case">Let’s abstract the use case</h1>
   <div style="text-align:left; margin-left:25%">
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A spatial area $A = \{ a_1, ..., a_k \}$ divided into $k$ distinct continuos area </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each area $a_j$ has a unique local data distribution $\theta_j$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> A set of sensor nodes $S = \{ s_1, ..., s_n\} (n &gt; |A|)$ are deployed in $A$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor will be located in a specifica area $a_j$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor has a certain communication range $r_c$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Each sensor $s_i$ has a certain neighbourhood $N_i$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> The complete local dataset $D_i$ is represented as $D_i = \{ (x_1, y_1), ..., (x_m, y_m) \}$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> A spatial area $A = \{ a_1, ..., a_k \}$ divided into $k$ distinct continuos area </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each area $a_j$ has a unique local data distribution $\Theta_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> A set of sensor nodes $S = \{ s_1, ..., s_n\} (n &gt; |A|)$ are deployed in $A$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor will be located in a specifica area $a_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor has a certain communication range $r_c$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor $s_i$ has a certain neighbourhood $N_i$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> The complete local dataset $D_i$ is represented as $D_i = \{ (x_1, y_1), ..., (x_m, y_m) \}$ </p>
   </div>
 <p><img src="problem-definition-only1.svg" style="heigth: 100%"></p>
 </section><section>
@@ -270,8 +270,8 @@
 <h1 id="space-fluid-sparse-choice">Space-fluid sparse choice</h1>
 <div style="text-align:left; margin-left:32%; font-size:20pt;%">
 <p> Let: 
-</p><p> <i class="fa-solid fa-angle-right" style="color: black;"></i> $m(n_1, n_2)$ be a similarity metric between two nodes </p> 
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> $\sigma &gt; 0$ be the maximum acceptable error </p> 
+</p><p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> $m(n_1, n_2)$ be a similarity metric between two nodes </p> 
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b"></i> $\sigma &gt; 0$ be the maximum acceptable error </p> 
 </div>
 
 <div class="container w-100 p-0">
@@ -300,8 +300,8 @@
   <div style="text-align:left; margin-left:15%; font-size:18pt;" class="fragment" data-fragment-index="2">
   
   <p>Suppose: </p>
-  <p><i class="fa-solid fa-angle-right" style="color: black;"></i> $m(l, n_1) + m(n_1, n_2) &lt; \sigma$ </p>
-  <p><i class="fa-solid fa-angle-right" style="color: black;"></i> $m(l, n_1) + m(n_1, n_2) + m(n_2, n_3) &gt; \sigma$ </p>
+  <p><i class="fa-solid fa-angle-right" style="color: #22373b;"></i> $m(l, n_1) + m(n_1, n_2) &lt; \sigma$ </p>
+  <p><i class="fa-solid fa-angle-right" style="color: #22373b;"></i> $m(l, n_1) + m(n_1, n_2) + m(n_2, n_3) &gt; \sigma$ </p>
   </div>
 </div>
 
@@ -310,20 +310,17 @@
 </section><section>
 <h1 id="experimental-evaluation">Experimental evaluation</h1>
 <br>
-<div style="text-align:left; margin-left:33%">
 
 
 <span class="fragment ">
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> Dataset: </b> Extended MNIST - Handwritten Letters </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> 26 classes </b> (latin alphabet) </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> 124800 </b> train samples </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> 20800 </b> test samples </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Synthetically split in <b> {3, 5, 9} </b> areas </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> Simulations realized in <b>Alchemist</b>¹, algorithms written in <b>ScaFi</b>² </p>
-<p> <i class="fa-solid fa-angle-right" style="color: black;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
-
-</span>
-
+  <div style="text-align:left; margin-left:33%">
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> Dataset: </b> Extended MNIST - Handwritten Letters </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> 26 classes </b> (latin alphabet) </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> 124800 </b> train samples </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> 20800 </b> test samples </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Synthetically split in <b> {3, 5, 9} </b> areas </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Simulations realized in <b>Alchemist</b>¹, algorithms written in <b>ScaFi</b>² </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
 </div>
 <div style="text-align:left; margin-left:5%; font-size:15pt;">
 <ol>
@@ -335,6 +332,9 @@
 </li>
 </ol>
 </div>
+
+</span>
+
 </section><section>
 <h1 id="simulation">Simulation</h1>
 <video style="width: 70%;" autoplay="" loop="" muted="" playsinline="">
@@ -347,16 +347,64 @@
 <h1 id="results-2">Results (2)</h1>
 <p><img src="results-test.svg" style="width: 100%"></p>
 </section><section>
-<h1 id="conclusions-and-future-works">Conclusions and future works</h1>
-<div style="text-align:left; margin-left:33%">
+<p>
+</p><div class="container w-100 p-0">
+    <div class="row ">
+
+
+
+<div class="col col-6">
+
+<h1> Conclusions </h1>
+
+<br>
+
 
 
 <span class="fragment ">
-  <p> <i class="fa-solid fa-angle-right" style="color: black;"></i>  </p>
+  <div style="text-align:left; margin-left:0%">
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Federations are correctly created without defining a number of cluster a priori </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> PSFL adapts to different network topologies (centralized, semi-centralized, peer-to-peer)   </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Thanks to specialization is possible to use smaller models </p>
+</div>
 
 </span>
 
-</div></section>
+
+</div>
+
+
+
+<div class="col col-6">
+
+<h1> Future work </h1>
+
+<br>
+
+
+
+<span class="fragment ">
+  <div style="text-align:left; margin-left:0%">
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the effect of node mobility on the federation' stability </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the potential of PSFL to adapt to dynamic network topologies </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the potential of PSFL to adapt to data distributions that change over time </p>
+</div>
+
+</span>
+
+
+</div>
+
+</div>
+</div>
+
+
+<span class="fragment ">
+  <p><img src="qr-preprint.svg" style="width: 30%"></p>
+
+</span>
+<p></p>
+</section>
 
   
 
