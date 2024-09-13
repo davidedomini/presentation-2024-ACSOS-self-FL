@@ -42,8 +42,27 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 # Use case
 
+{{<multicol>}}
 
----
+{{<col>}}
+
+<div style="text-align: left; margin-left:0%;">
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b>Scenario:</b> we want to build a decentralized system for healthcare monitoring </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b>Task:</b> predict potential health problems in our patients (e.g., stroke prediction) </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b>Problem:</b> users' privacy </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b>Problem:</b> different users may have different health profiles (heterogeneous data)</p>
+</div>
+{{</col>}}
+
+{{<col>}}
+<div style="margin-left:20%;">
+<img src="keyboard.svg" style="width: 100%" />
+</div>
+{{</col>}}
+
+{{</multicol>}}
+
+<!-- ---
 # Federated Learning in a nutshell
 
 {{<multicol>}}
@@ -119,36 +138,31 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 
 {{</multicol>}}
-
----
+-->
+--- 
 
 # Clustered Federated Learning
 
+<img src="clustered-FL.svg" style="width: 50%" />
+
 {{<multicol>}}
 
-{{<col class="col-7">}}
+{{<col>}}
+<div style="text-align: left; font-size: 20pt;">
+
 {{% fragment %}}
-<div style="text-align: center; heigth: 100%;">
-<img src="clustered-FL.svg" style="width: 100%" />
-</div>
+<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Assumption:</span> clients can be divided in clusters (IID data within each cluster) </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Multiple models </span> are trained to target various local distributions </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Similarity measures:</span> loss based, gradient based, weight based </p>
 {{%/ fragment %}}
+
+</div>
+
 
 {{</col>}}
 
-{{<col class="col-5">}}
-
-<div style="text-align:left; margin-left: 15%; font-size:20pt;">
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Assumption:</span> clients can be divided in clusters (IID data within each cluster) </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Multiple models </span> are trained to target various local distributions </p>
-{{%/ fragment %}}
-
-{{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Similarity measures:</span> loss based, gradient based, weight based </p>
-{{%/ fragment %}}
+{{<col>}}
+<div style="font-size: 20pt;">
 
 {{% fragment %}}
 
@@ -156,12 +170,13 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Clustering is performed by a central server </p>
 <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Number of clusters must be defined a priori </p>
-{{%/ fragment %}}
 
+{{%/ fragment %}}
 </div>
 {{</col>}}
 
 {{</multicol>}}
+
 
 
 ---
@@ -187,6 +202,18 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
     src="problem-definition-only1.svg"
     style = "heigth: 100%"
   />
+
+---
+
+# What we want to obtain?
+
+<img src="what-we-want.svg" style="width: 70%" />
+
+<div style="text-align:left; margin-left:12%">
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Starting from the network of devices we want to cluster devices into groups following a certain similarity metric </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Then, we want to elect some special nodes called leaders </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Leaders could be elected following different policies (e.g., devices with the higher computational power) </p>
+</div>
 
 ---
 
@@ -222,7 +249,7 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 # Loss based Similarity
 
-> If the model trained by client A performs well on the dataset <br> of the client B (and viceversa), then the two clients <br> should be considered similar.
+> If the model trained by client A has a loss smaller than a certain threshold on the dataset of the client B (and viceversa),<br>  then the two clients should be considered similar.
 
 <br>
 
@@ -401,7 +428,7 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the effect of node mobility on the federation' stability </p>
 <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the potential of PSFL to adapt to dynamic network topologies </p>
 <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the potential of PSFL to adapt to data distributions that change over time </p>
-
+<!-- hierarchical? -->
 </div>
 {{%/ fragment %}}
 
