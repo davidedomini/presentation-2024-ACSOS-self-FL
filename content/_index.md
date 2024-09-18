@@ -47,10 +47,16 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 {{<col>}}
 
 <div style="text-align: left; margin-left:0%;">
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b>Scenario:</b> we want to build a decentralized system for healthcare monitoring </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b>Scenario:</b> a decentralized system for healthcare monitoring </p>
 <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b>Task:</b> predict potential health problems in our patients (e.g., stroke prediction) </p>
 <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b>Problem:</b> users' privacy </p>
+<div style="text-align: left; margin-left:3%; font-size: 18pt;">
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em>Solution:</em> Federated Learning </p>
+</div>
 <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b>Problem:</b> different users may have different health profiles (heterogeneous data)</p>
+<div style="text-align: left; margin-left:3%; font-size: 18pt;">
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em>Solution:</em> Clustered approaches </p>
+</div>
 </div>
 {{</col>}}
 
@@ -151,9 +157,9 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 <div style="text-align: left; font-size: 20pt;">
 
 {{% fragment %}}
-<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Assumption:</span> clients can be divided in clusters (IID data within each cluster) </p>
-<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Multiple models </span> are trained to target various local distributions </p>
-<p> <i class="fa-solid fa-angle-right" style="color: #fd8300;"></i> <span style="color: #fd8300;">Similarity measures:</span> loss based, gradient based, weight based </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em>Assumption:</em> clients can be divided in clusters (IID data within each cluster) </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em>Multiple models </em> are trained to target various local distributions </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em>Similarity measures:</em> loss based, gradient based, weight based </p>
 {{%/ fragment %}}
 
 </div>
@@ -166,11 +172,10 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 {{% fragment %}}
 
-#### HOWEVER
-
+<div style="text-align: left; font-size: 20pt; margin-left:10%;">
 <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Clustering is performed by a central server </p>
 <p> <i class="fa-solid fa-xmark"style="color: red;"></i> Number of clusters must be defined a priori </p>
-
+</div>
 {{%/ fragment %}}
 </div>
 {{</col>}}
@@ -185,17 +190,17 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 ---
 
-# Let's abstract the use case
+# Formalization
 
   
   <div style="text-align:left; margin-left:25%">
-  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> A spatial area $A = \{ a_1, ..., a_k \}$ divided into $k$ distinct continuos area </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each area $a_j$ has a unique local data distribution $\Theta_j$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> A set of sensor nodes $S = \{ s_1, ..., s_n\} (n > |A|)$ are deployed in $A$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor will be located in a specifica area $a_j$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor has a certain communication range $r_c$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor $s_i$ has a certain neighbourhood $N_i$ </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> The complete local dataset $D_i$ is represented as $D_i = \{ (x_1, y_1), ..., (x_m, y_m) \}$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> A spatial area $A = \{ a_1, ..., a_k \}$ divided into <em>$k$ distinct continuos area </em></p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each area $a_j$ has a <em>unique local data distribution</em> $\Theta_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> A set of <em>sensor nodes</em> $S = \{ s_1, ..., s_n\} (n > |A|)$ are deployed in $A$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor will be located in a <em>specific area</em> $a_j$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor has a certain <em>communication range</em> $r_c$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Each sensor $s_i$ has a certain <em>neighbourhood</em> $N_i$ </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> The complete <em>local dataset</em> $D_i$ is represented as $D_i = \{ (x_1, y_1), ..., (x_m, y_m) \}$ </p>
   </div>
 
   <img
@@ -210,9 +215,9 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 <img src="what-we-want.svg" style="width: 70%" />
 
 <div style="text-align:left; margin-left:12%">
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Starting from the network of devices we want to cluster devices into groups following a certain similarity metric </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Then, we want to elect some special nodes called leaders </p>
-  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Leaders could be elected following different policies (e.g., devices with the higher computational power) </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Starting from the network of devices we want to <em>cluster devices into groups</em> following a certain similarity metric </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Then, we want to <em>elect</em> some special nodes called <em>leaders</em> </p>
+  <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Leaders could be elected following <em>different policies</em> (e.g., devices with the higher computational power) </p>
 </div>
 
 ---
@@ -283,8 +288,8 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 <div style="text-align:left; margin-left:32%; font-size:20pt;%">
 <p> Let: </b>
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> $m(n_1, n_2)$ be a similarity metric between two nodes </p> 
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b"></i> $\sigma > 0$ be the maximum acceptable error </p> 
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> $m(n_1, n_2)$ be a <em>similarity metric</em> between two nodes </p> 
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b"></i> $\sigma > 0$ be the <em>maximum acceptable error</em> </p> 
 </div>
 {{<multicol>}}
 
@@ -347,13 +352,13 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 
 <div style="text-align:left; margin-left:33%">
 
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> Dataset: </b> Extended MNIST - Handwritten Letters </p>
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> 26 classes </b> (latin alphabet) </p>
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> 124800 </b> train samples </p>
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> 20800 </b> test samples </p>
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Synthetically split in <b> {3, 5, 9} </b> areas </p>
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Simulations realized in <b>Alchemist</b>¹, algorithms written in <b>ScaFi</b>² </p>
-<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <b> Experiments </b> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em> Dataset: </em> Extended MNIST - Handwritten Letters </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em> 26 classes </em> (latin alphabet) </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em> 124800 </em> train samples </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em> 20800 </em> test samples </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Synthetically split in <em> {3, 5, 9} </em> areas </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Simulations realized in <em>Alchemist</em>¹, algorithms written in <em>ScaFi</em>² </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> <em> Experiments </em> available and reproducible <a href="https://github.com/nicolasfara/experiments-2024-ACSOS-opportunistic-federated-learning"> here </a></p>
 
 
 </div>
@@ -396,7 +401,7 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 ---
 
 
-{{<multicol>}}
+<!-- {{<multicol>}}
 
 {{<col class="col-6">}}
 
@@ -428,7 +433,7 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
 <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the effect of node mobility on the federation' stability </p>
 <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the potential of PSFL to adapt to dynamic network topologies </p>
 <p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the potential of PSFL to adapt to data distributions that change over time </p>
-<!-- hierarchical? -->
+hierarchical?
 </div>
 {{%/ fragment %}}
 
@@ -442,4 +447,13 @@ International Conference on Autonomic Computing and Self-Organazing Systems @ AC
     style = "width: 30%"
 />
 
-{{%/ fragment %}}
+{{%/ fragment %}} -->
+
+# Future work
+
+<div style="text-align:left; margin-left:20%">
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Using <em>sparse neural network</em> for low resource settings </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the effect of <em>node mobility</em> on the federations stability </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Investigate the potential of PSFL to adapt to <em>dynamic network topologies</em> </p>
+<p> <i class="fa-solid fa-angle-right" style="color: #22373b;"></i> Integrate continual learning approaches to adapt to <em>data distributions that change over time</em> </p>
+</div>
